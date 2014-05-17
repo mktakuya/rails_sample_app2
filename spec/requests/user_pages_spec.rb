@@ -34,6 +34,13 @@ describe "UserPages" do
         it { should have_title('Sign up') }
         it { should have_content('error') }
       end
+
+      describe "after information" do
+        before { click_button submit }
+
+        it { should have_title('Sign up') }
+        it { should have_content('error') }
+      end
     end
 
     describe "with valid information" do
